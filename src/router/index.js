@@ -31,12 +31,15 @@ let router = new Router({
 //注册一个全局守卫，作用是在路由跳转钱，对路由进行判断，防止未登录用户直接登录到需要登录的页面
 router.beforeEach((to,form,next) => {
   let token = localStorage.getItem('mytoken')
+  
   //如果已经登录--放行
   if(token) {
+    console.log('mytoken',1111)
     next()
   }else {
     //如果未登录，访问非登录页面立刻跳转到登录页面
     if(to.path !== '/login'){
+      console.log('mytoken',123)
       next({path:'/login'})
     }else{
       //如果未登录，但访问的是登录页面，直接进入
