@@ -16,12 +16,13 @@ import '@/styles/index.scss'
 // 3. 集成路由
 import router from './router'
 
-// 4. 集成vuex
+
 
 
 new Vue({
   el: '#app',
   router,
+ 
   components: { App },
   template: '<App/>'
 })

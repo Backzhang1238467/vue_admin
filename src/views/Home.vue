@@ -12,13 +12,14 @@
         text-color="#fff"
         active-text-color="#ffd04b"
          :collapse="isCollapse"
+         :router = "true"
         >
         <el-submenu index="1">
         <template slot="title">
             <i class="el-icon-location"></i>
             <span>用户管理</span>
         </template>
-        <el-menu-item index="2">
+        <el-menu-item index="/user">
             <i class="el-icon-menu"></i>
             <span slot="title">用户列表</span>
         </el-menu-item>
@@ -32,7 +33,7 @@
             <div class="system-title">电商后台管理系统</div>
             <div>
             <span class="welcome">
-                hello,Mr.Zhang
+                hello,xxx
             </span>
             <el-button type="text" @click="logout">退出</el-button>
             </div>

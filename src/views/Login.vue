@@ -50,7 +50,7 @@ export default {
                //1.存储后台返回的登录成功凭证token
                localStorage.setItem('mytoken',res.data.token)
                //2.使用vuex存储用户名
-             
+              
               //3.如果成功跳转到首页
                this.$router.push({name:'Home'})
              }else {
